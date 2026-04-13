@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirect...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <script>
+    var map = {
+      "it": "https://biesse.com/it/it/contattaci/richiedi-assistenza/",
+      "en": "https://biesse.com/ww/en/contact-us/support-request/",
+    };
+    var defaultUrl = "https://biesse.com/ww/en/contact-us/support-request/";
+
+    var lang = (navigator.language || navigator.userLanguage || "").slice(0, 2).toLowerCase();
+    window.location.href = map[lang] || defaultUrl;
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://esempio.com">
+    <p>Clicca <a href="https://esempio.com">qui</a> per continuare.</p>
+  </noscript>
+</body>
+</html>
